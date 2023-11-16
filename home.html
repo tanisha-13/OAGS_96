@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./home.css">
+    <style>
+        #image_container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Wrap images to the next line if they exceed the container width */
+            width: 100%;
+            justify-content: space-between;
+            /* Take up 100% of the window width */
+        }
+
+        #image_container img {
+            
+            width: 20%;
+            /* Each image takes up 20% of the container width */
+            height: 350px;
+            /* Fixed height for each row */
+            object-fit: contain;
+            /* Maintain aspect ratio */
+           
+        }
+    </style>
+    <script>
+        function show_images() {
+            var selectedValue = document.getElementById("art_choice").value;
+            var imageContainer = document.getElementById("image_container");
+
+            // Clear previous images
+            imageContainer.innerHTML = "";
+
+            // If a valid option is selected, load and append images to the container
+            if (selectedValue !== "") {
+                var imagePath = "./" + selectedValue + "/";
+                loadImages(imagePath);
+            }
+        }
+
+        function loadImages(path) {
+            var imageContainer = document.getElementById("image_container");
+
+            // Load and append images to the container
+            if(path=="./visual/"||path=="./pop/"){
+               for (var i = 1; i <= 5; i++) {
+                    var img = document.createElement("img");
+                    img.src = path + i + ".jpg";
+                    img.alt = "Art Image " + i;
+                    imageContainer.appendChild(img);
+                } 
+            }else if(path=="./fine/"){
+                for (var i = 1; i <= 5; i++) {
+                    if(i==3){
+                        var img = document.createElement("img");
+                        img.src = path + i + ".jpg";
+                        img.alt = "Art Image " + i;
+                        imageContainer.appendChild(img);
+                    }else{
+                        var img = document.createElement("img");
+                        img.src = path + i + ".png";
+                        img.alt = "Art Image " + i;
+                        imageContainer.appendChild(img);
+                    }
+                    
+                }
+            }
+            else{
+                for (var i = 1; i <= 5; i++) {
+                    var img = document.createElement("img");
+                    img.src = path + i + ".png";
+                    img.alt = "Art Image " + i;
+                    imageContainer.appendChild(img);
+                }
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="home"><a href="#">Home</a></div>
+            <div class="portfolio"><a href="./review.html">Feedback</a></div>
+            <div class="contact"><a href="./feed.html">Review</a></div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="second_container" style="display:flex;">
+            <form action="">
+                <select title="form" name="Art type" id="art_choice" required style="width:150px;height:30px;"
+                    onchange="show_images()">
+                    <option selected value="">Select Art Type</option>
+                    <option value="visual">Visual art</option>
+                    <option value="abstract">Abstract art</option>
+                    <option value="pop">Pop art</option>
+                    <option value="fine">Fine art</option>
+                </select>
+                <br>
+                <button id="submit" class="btn"><a href="https://paytm.com/">Pay</a></button>
+            </form>
+        </div>
+
+        <!-- Container to hold the dynamically generated images -->
+        
+    </div>
+    <div id="image_container"></div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up page</title>
+    <link rel="stylesheet" href="./sign.css">
+</head>
+<body>
+    <div class="main">
+        <a href="./login.html"  class="butto">Log In</a>
+        <form class="login" onsubmit="register()">
+            <div class="log">Sign Up</div>
+            <input type="email" name="email" class="box" placeholder="Enter Email" id="email" required>
+            <input type="password" name="password" class="box" placeholder="Enter password" id="pass" required>
+            <input type="password" name="password" class="box" placeholder="Confirm password" id="confirm_pass" required>
+            <button type="submit"  id="submit">Submit</button>
+        </form>
+        
+    </div>
+
+    <script>
+       function register(){  
+        event.preventDefault();
+           let email=document.getElementById("email").value;
+            let password=document.getElementById("pass").value;
+            let confirm_pass=document.getElementById("confirm_pass").value;
+            if(password!=confirm_pass){
+                alert("Passwords do not match");
+            }
+            else {
+                localStorage.setItem("email",email);
+                localStorage.setItem("password",password);
+                localStorage.setItem("Registered",true);
+                alert("Registration successful");
+                location.href="./login.html";
+            }
+        }
+    </script>
+</body>
+</html>

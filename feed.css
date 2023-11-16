@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/payment_syatem/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+    background-size: cover;
+}
+
+.container{
+    
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+
+}
+
+a:hover{
+    cursor: pointer;
+    color: chartreuse;
+}
+
+.home{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left:50px ;
+}
+
+.View{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+.portfolio{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.contact{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: blue;
+    text-transform: uppercase;
+}
+
+.reivew .box{
+    border-radius: .5rem;
+    background-color: rbga(0,0,0,0.5);
+    padding: 2rem;
+    position: relative;
+}
+
+.reivew .box .fa-quote-right{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: blue;
+    font-size: 5rem;
+}
+
+.reivew .box .user{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.reivew .box .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reivew .box .user h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.reivew .box .user span{
+    font-size: 1.5rem;
+    color: #eee;
+}
+
+.reivew .box p{
+    line-height: 2;
+    color: #fff;
+    padding: 5rem 0;
+    font-size: 1.6rem;
+}
+
+
+
+
+
+

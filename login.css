@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(./login.jpg);
+    background-size: cover;
+    
+}
+
+.main{
+    
+    width: 100%;
+    height: 700px;
+}
+
+.butto{
+    display: inline-block;
+    background-color:rgba(0,0,0,0.5);
+    margin-left: 1300px;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.butto:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    width: 130px;
+}
+
+
+.login{
+    
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    margin-top:130px ;
+    margin-left: 600px;
+    
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+.login:hover{
+    width: 350px;
+    height: 450px;
+}
+
+.log{
+    text-transform: uppercase;
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 30px;
+    border-bottom: 4px solid rgba(255,255,255,0.5);
+    color: white;
+
+}
+
+.log:hover{
+    font-size: 40px;
+    
+}
+
+.box{
+    padding: 12px;
+    margin: 20px;
+    width: 65%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1rem;
+}
+
+.box:hover{
+    width: 70%;
+    cursor: pointer;
+}
+
+#submit{
+    padding: 10px 20px;
+    margin-top: 30px;
+    width: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+    color: white;
+    width: 60%;
+
+}
+
+::placeholder{
+    color: white;
+}
+
+p{
+    color: white;
+    text-align: left;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}

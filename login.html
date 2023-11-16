@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_page</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    
+        <div class="main">
+            <a href="./signup.html"  class="butto">Sign Up</a>
+            <form class="login" onsubmit="check()">
+                <div class="log">Login</div>
+                <input type="email" name="email" class="box" id="email" placeholder="Enter Email" required>
+                <input type="password" name="password" class="box" id="password" placeholder="Enter password" required>
+                <p>Forgrt_password <a href="#">Click</a></p>
+                <button type="submit" id="submit" >Login</button> 
+                
+            </form>
+            
+        </div>
+        <script>
+            function check(){
+                event.preventDefault();
+                let email=document.getElementById("email").value;
+                let password=document.getElementById("password").value;
+                let registered=localStorage.getItem("Registered");
+                console.log(registered);
+                if (registered) {
+                    let prev_email=localStorage.getItem("email");
+                    let prev_pass=localStorage.getItem("password");
+                    if(email==prev_email && password==prev_pass){
+                        localStorage.setItem("LoggedIn",true);
+                        location.href="./home.html";
+                    }else{
+                        alert("Invalid login credentials!");
+                    }
+                }
+            }
+    </script>
+</body>
+</html>
